@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 310px;
+            height: 190px;
+            margin: 50px auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            position: relative; /* 自绝父相是最合适 */
+        }
+        #top {
+            position: absolute;  /* 孩子加了绝对定位如果父亲没有加定位则以浏览器为标准 */
+            left: 0;
+            top: 0;
+        }
+
+        #br {
+            position: absolute; 
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div >
+        <img src="images/top_tu.gif" alt="" id="top">
+        <img src="images/adv.jpg" alt="" id="adv">
+        <img src="images/br.gif" alt="" id="br">
+    </div>
+</body>
+</html>

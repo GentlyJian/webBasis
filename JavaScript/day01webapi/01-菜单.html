@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #list li {
+            list-style-type: none;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            background-color:beige;
+            text-align: center;
+            float: left;
+            margin-left: 5px;
+        }
+
+        #list li.current {
+            background-color: burlywood;
+        }
+
+        #list li a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <ul id="list">
+            <li class="current"><a href="javascript:void(0)">首页</a></li>
+            <li><a href="javascript:void(0)">播客</a></li>
+            <li><a href="javascript:void(0)">博客</a></li>
+            <li><a href="javascript:void(0)">相册</a></li>
+            <li><a href="javascript:void(0)">关于</a></li>
+            <li><a href="javascript:void(0)">帮助</a></li>
+        </ul>
+    </div>
+    <script src="js/common.js"></script>
+    <script>
+        var ul = my$("list");
+        var lis = ul.children;
+        //为每个li 下 的 a 注册事件
+        for(var i = 0; i < lis.length; i++) {
+            var li = lis[i]
+            var link = getFirstElementChild(li);
+            link.onclick = fn;
+        }
+        function fn() {
+            //清除所有li的样式
+            for(var i = 0; i < lis.length; i++) {
+                lis[i].className = "";
+            }
+            //为当前点击的li 设置 样式
+            this.parentNode.className = "current";
+            return false;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //6.Map
+    // 6.1类似于对象（Object) 但它键 不限于字符串，各种类型值包括对象都可以作为键
+    // const m = new Map();
+    // const o = {p: 'hello world'};
+
+    // m.set(o, 'content');
+    // m.get(o);
+    // m.has(o);
+    // m.delete(o);
+    // m.has(o);
+
+    //6.2Map也可以接受一个双元数组作为参数
+
+    // const m = new Map([
+    //     ['name', 'zs'],
+    //     ['title', 'author']
+    // ]);
+    // m.size;
+
+    //6.3Map和Set都可以生成新的Map
+    // const set = new Set([
+    //     ['foo', 20],
+    //     ["bar", 22]
+    // ]);
+    // const m1 = new Map(set);
+
+    //6.4遍历方法 map的遍历顺序就是插入顺序
+    // const map = new Map(new Set([ //将Set转换成 Map
+    //     ['F', 'no'],
+    //     ['T', 'true']
+    // ]))
+    // //keys()
+    // for(let key of map.keys()) {
+    //     console.log(key)
+    // }
+    // //Values
+    // for(let values of map.values()) {
+    //     console.log(values);
+    // }
+    // //entries
+    // for(let item of map.entries()) {
+    //     console.log(item[0],item[1])
+    // }
+    // //等同于
+    // for(let [key,value] of map.entries()) {
+    //     console.log(key,value);
+    // }
+    // //等同于
+    // for (let [key,value] of map) { //map默认使用 entries
+    //     console.log(key,value)
+    // }
+
+    //6.5 map解构转为 数组结构
+    // const map = new Map([
+    //     [1, 'one'],
+    //     [2, 'two'],
+    //     [3, 'tree']
+    // ]);
+    // [...map.keys()];
+
+    // [...map.values()];
+
+    // [...map.entries()];
+
+    // [...map];
+
+    //m结合数组的map方法和 filter方法
+    const map = new Map().set(1,'a').set(2,'b').set(3,'c');
+
+    const map1 = new Map([...map].fillter(([k,v]) => k < 3)) //注意参数是(k,v)
+    const map2 = new Map([...map].map(([k,v]) => [k * 2, '_' + v]))
+</script>
+
+</html>

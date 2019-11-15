@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            min-width: 320px;
+            max-width: 540px;
+            margin: 0 auto;
+        }
+
+        header {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 5px;
+        }
+
+        header img {
+            width: 100%;
+            height: 100px;
+        }
+
+        nav {
+            padding: 5px;
+        }
+
+        nav .row {
+            height: 90px;
+            background-color: pink;
+            display: flex;
+            border-radius: 10px;
+            margin-bottom: 5px;
+        }
+
+        .row:first-child {
+            background-color: #ff697a;
+        }
+
+        nav .row:nth-child(2) {
+            background-color: #3d98ff;
+        }
+
+        nav .row:nth-child(3) {
+            background-color: #44c522;
+        }
+
+        nav .row:nth-child(4) {
+            background-color: #fc9720;
+        }
+
+        .row1 {
+            flex: 1;
+            border-left: 1px solid #fff;
+        }
+
+        .row div:first-child {
+            border: 0;
+        }
+
+        .col2 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .col2 a {
+            flex: 1;
+            text-align: center;
+            line-height: 45px;
+            color: white;
+            /* font-weight: bold; */
+            text-shadow: 1px 2px 5px rgba(0, 0, 0, .3);
+        }
+
+        .col2 a:first-child {
+            border-bottom: 1px solid #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="images/ctrip.jpg" alt="">
+    </header>
+    <nav>
+        <div class="row">
+            <div class="row1 col1"></div>
+            <div class="row1 col2">
+                <a href="#">海外酒店</a>
+                <a href="#">青年旅馆</a>
+            </div>
+            <div class="row1 col2">
+                <a href="#">酒店</a>
+                <a href="#">民宿</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row1 col1"></div>
+            <div class="row1 col2">
+                <a href="#">海外酒店</a>
+                <a href="#">青年旅馆</a>
+            </div>
+            <div class="row1 col2">
+                <a href="#">酒店</a>
+                <a href="#">民宿</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row1 col1"></div>
+            <div class="row1 col2">
+                <a href="#">海外酒店</a>
+                <a href="#">青年旅馆</a>
+            </div>
+            <div class="row1 col2">
+                <a href="#">酒店</a>
+                <a href="#">民宿</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row1 col2">
+                <a href="#">海外酒店</a>
+                <a href="#">青年旅馆</a>
+            </div>
+            <div class="row1 col2">
+                <a href="#">海外酒店</a>
+                <a href="#">青年旅馆</a>
+            </div>
+            <div class="row1 col2">
+                <a href="#">酒店</a>
+                <a href="#">民宿</a>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>

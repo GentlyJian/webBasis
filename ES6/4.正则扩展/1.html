@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //1. RegExp构造函数 参数为两个字符串，一个为正则格式 一个为修饰符
+    // var regex = new RegExp('xyz','i');
+    //等价于
+    // var regex = /xyz/i;
+
+    //2.字符串的正则方法
+    // match() search() replace() split()
+
+    //3.u修饰符
+    // 3.1./u 正确处理大于\uFFFF的Unicode字符
+    // 3.2.在正则中表示除换行符以外的字符 但是不能识别大于 0*FFF的字符
+    //对于大于0*FFFF的字符需要加上/u
+    //3.3 量词在使用 u修饰符后才能识别大于0*FFFF的字符
+
+    //4.RegExp.prototype.unicode属性
+    //该属性可以查看是否设置了u修饰符
+
+    //5.y修饰符
+    // 5.1.也叫粘连修饰符
+    // 5.2.和g修饰符类似 ，但会从上一次匹配成功的下一个位置开始匹配
+    //如果下一位位置不匹配 则停止
+
+    //6.RegExp.protortype.sticky属性
+    //是否设置了sticky属性
+
+    //7.RegExp.prototype.flags属性
+    //返回设置的修饰符
+
+    //8.s修饰符：dotAll模式
+    // 正则. + /s 修饰符 则变身成 dotAll .代表一切
+
+    //9.后行断言
+
+    //10.Unicode属性类
+
+    //11.具名组匹配
+    //11.1 可以使用（）进行组匹配
+    //11.2 模式的头部添加“问号 + 尖括号 + 组名”
+
+    //11.3 解构赋值和替换（感觉挺重要的）
+    // let { groups: { one, two } } = /^(?<one>.*):(?<two>.*)$/u.exec('foo:bar');
+    // one  // foo
+    // two  // bar
+
+    // let re = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/u;
+    // '2015-01-02'.replace(re, '$<day>/$<month>/$<year>')
+    // '02/01/2015'
+
+    //11.4 \k<word> 组名    \1用法 （重复一次)
+
+    //12.String.prototype.matchAll
+</script>
+
+</html>

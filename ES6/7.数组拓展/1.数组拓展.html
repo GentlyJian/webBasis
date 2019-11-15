@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // function f(v, w, x, y, z) { }
+    // const args = [0, 1];
+    // f(-1, ...args, 2, ...[3]);
+
+    const a1 = [{ foo: 1 }];
+    const a2 = [{ bar: 2 }];
+
+    const a3 = a1.concat(a2);
+    const a4 = [...a1, ...a2];
+
+    // a1[0] = {foo:2}
+    a3[0] === a1[0] // true
+    a4[0] === a1[0] // true
+
+   
+</script>
+
+</html>

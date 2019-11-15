@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: #f3f5f7;
+    /* font-size: 16px; */
+}
+
+ul {
+    /* 清除列表样式 */
+    list-style: none;
+}
+
+a {
+    /* 清除链接下划线 */
+    text-decoration: none;
+    color: #050505;
+}
+
+/* 清除表单的边框 并设置盒子模型*/
+input {
+    border: 0px;
+    box-sizing: border-box;
+}
+
+/* 清除浮动 */
+.clearfix::before,
+.clearfix:after {
+    display: table;
+    content: "";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    /* 兼容IE6,7 */
+    *zoom: 1;
+}
+
+.container {
+    width: 1200px;
+    margin: 0px auto;
+}
+
+header {
+    height: 100px;
+    overflow: hidden;
+    ;
+}
+
+nav {
+    width: 1200px;
+    height: 42px;
+    margin: 26px auto;
+}
+
+/* logo部分 */
+.logo {
+    float: left;
+}
+
+.logo img {
+    height: 42px;
+    width: 195px;
+}
+
+.navbar {
+    float: left;
+    width: 250px;
+    height: 42px;
+    line-height: 42px;
+    margin-left: 50px;
+}
+
+/* 导航栏部分 */
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    padding: 0px 10px;
+    display: block;
+}
+
+.navbar li a:hover {
+    border-bottom: solid 2px #00a4ff;
+}
+
+/* 搜索框部分 */
+.search {
+    width: 410px;
+    height: 38px;
+    /* border: 1px solid #00a4ff; */
+    float: left;
+    margin-left: 15px;
+}
+
+.search input[type='text'] {
+    width: 360px;
+    height: 38px;
+    border: 0;
+    padding-left: 20px;
+    float: left;
+
+}
+
+.search input[type='submit'] {
+    width: 50px;
+    height: 38px;
+    /* border: 0;  */
+    background: #00a4ff url(../images/fa-search.png) no-repeat center center;
+    float: left;
+}
+.information {
+    float:left;
+    margin-left: 30px;
+    line-height: 42px;;
+}
+.information li{
+    padding-right: 25px;
+    float: left;
+}
+.information img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.banner {
+    height: 420px;
+    background-color: #1c036c;
+    position: relative;
+}
+
+.banner-in {
+    height: 420px;
+    background: url(../images/banner2.png);
+}
+.slidebar {
+   height: 420px;
+   width: 193px;
+   float: left;
+   background: rgb(0, 0, 0, 0.3);
+}
+.banner-in li a{
+    display: block;
+    line-height: 42px;
+    padding:0 20px;
+    font-size: 14px;
+    color: #fff;
+}
+.banner-in li a:hover {
+    color: #00a4ff;
+}
+.banner-in a span {
+    float:right;
+    font-family: arial;
+}
+.banner-in .timetable {
+    height: 300px;
+    width: 230px;
+    background-color: rgb(255, 255, 255);
+    float: right;
+    margin-top: 50px;
+}
+.timetable dt {
+    height: 50px;
+    background-color: #00a4ff;
+    color: white;
+    line-height: 50px;
+    text-align: center;
+    font-family: 16px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+.timetable dd {
+    height: 60px;
+    width: 192px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ababab;
+    padding-top: 10px;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+.timetable dd:last-child {
+    border: 0;
+}
+.timetable dd h4 {
+    font-size: 16px;
+    color: #5a5a5a;
+}
+.timetable dd p {
+    font-size: 14px;
+    color: #ababab;
+}
+.timetable dd a {
+    display: block;
+    height: 40px;
+    /* width: 200px; */
+    border: 1px solid #00a4ff;
+    color: #00a4ff;
+    text-align: center;
+    font-weight: 700;
+    line-height: 40px;
+}
+.timetable dd a:hover {
+    background-color: #00a4ff;
+    color: white;
+}
+/* 小圆点部分开始 */
+.circle {
+    width: 180px;
+    height: 22px;
+    position: absolute;
+    left: 50%;
+    margin-left: -90px;
+    bottom: 10px;
+}
+.circle li {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, .3);
+    float: left;
+    margin: 5px 5px;
+    border-radius: 50%;
+}
+.circle .current {
+    width: 18px;
+    background-color: #fff;
+    border-radius: 7px;
+}
+.recommand {
+    height: 60px;
+    line-height: 60px;
+    background-color: #fff;
+    margin-top: 8px;
+    box-shadow: 0 2px 2px rgb(0, 0, 0, 0.3);
+}
+.recommand a {
+    padding: 0 32px;
+    border-right: 1px solid #ccc;
+}
+.recommand a:hover {
+    color: #00a4ff;
+}
+.recommand a:first-child {
+    color: #00a4ff;
+    font-weight: 700;
+}
+.recommand a:last-child {
+    color: #00a4ff;
+    border: 0;
+    font-size: 14px;
+    float: right;
+}
+/* 推荐内容 */
+.recom-box {
+    margin-top: 35px;
+}
+.recom-hd {
+    height: 40px;
+}
+.recom-hd h4 {
+    font-size: 20px;
+    color: #494949;
+    float: left;
+    font-weight: normal;
+}
+.recom-hd a {
+    font-size: 14px;
+    color: #a5a5a5;
+    float:right;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+.recom-bd li {
+    width: 228px;
+    height: 270px;
+    background-color: #fff;
+    float: left;
+    overflow: hidden;
+    margin:  15px 15px 0 0;
+    box-shadow: 0 2px 10px rgb(0, 0, 0);
+    transition:margin-top ease-out 0.2s;
+}
+.recom-bd li:hover {
+    margin-top: 8px;
+}
+.recom-bd li:nth-child(5n) {
+    margin-right: 0;
+}
+
+.recom-bd li h4,.recom-bd li p {
+    padding: 0 20px 0 24px;
+    margin-top: 15px;
+}
+.recom-bd li h4 {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+}
+.recom-bd li p {
+    font-size: 12px;
+    line-height: 20px;
+}
+.recom-bd p span {
+    color: #ff7c2d;
+}
+/* 底部內容 */
+footer {
+    height: 270px;
+    background-color: #fff;
+    padding-top: 30px;
+}
+.footer-l {
+    float: left;
+}
+.footer-l p {
+    width: 430px;
+    font-size: 12px;
+    color: #a5a5a5;
+    margin-top: 25px;
+}
+.footer-l a {
+    height: 35px;
+    width: 120px;
+    text-align: center;
+    line-height: 35px;
+    display: block;
+    color: #00a4ff;
+    margin-top: 25px;
+    border: 1px solid #00a4ff;
+}
+.footer-l a:hover {
+    color: #fff;
+    background-color: #00a4ff;
+}
+.footer-r {
+    float: right;
+}
+.footer-r dl {
+    float: left;
+    width: 223px;
+}
+.footer-r dl dt {
+    height: 27px;
+    color: #7d7d7d;
+}
+.footer-r dl dd {
+    height: 22px;
+    font-size: 14px;
+    color: #333333
+}

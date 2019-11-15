@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 报错
+    // const foo = 'bar';
+    // const bar = 'abc';
+    // const baz = { [foo] };
+
+    // 正确
+    // const foo = 'bar';
+    // const baz = { [foo]: 'abc' };
+
+    const keyA = { a: 1 };
+    const keyB = { b: 2 };
+
+    const myObject = {
+        [keyA]: 'valueA',
+        [keyB]: 'valueB'
+    };
+
+    myObject // Object {[object Object]: "valueB"}
+</script>
+
+</html>

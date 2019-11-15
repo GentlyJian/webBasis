@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            width: 450px;
+            height: 300px;
+            margin: 100px auto;
+            border: 1px solid #000;
+            position: relative;
+            background: url(images/1.jpg) no-repeat;
+            perspective: 1000px;  /* 透视，模拟眼睛到屏幕的距离 这个元素要加在父元素上*/
+        }
+
+        section:hover .door-l {
+            transform: rotateY(-130deg); /*  以Y轴为中心，向左是负数，向右是正数 */
+
+        }
+
+        section:hover .door-r {
+            transform: rotateY(130deg);
+        }
+
+        .door-l,
+        .door-r {
+            width: 50%;
+            height: 100%;
+            float: left;
+            background: url(images/bg.png);
+            position: absolute;
+            top: 0;
+            transition: all 1s;  /* 动画过渡效果 */
+
+        }
+
+        .door-l {
+            left: 0;
+            border-right: 1px solid #000;
+            transform-origin: left;   /*  以元素最左边为轴 */
+        }
+
+        .door-r {
+            right: 0;
+            border-left: 1px solid #000;
+            transform-origin: right;
+        }
+
+        .door-l::before,
+        .door-r::before {
+            content: "";
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            transform: translateY(-50%);  /* 向上偏移元素一半的高度 */
+            top: 50%;
+        }
+
+        .door-l::before {
+            right: 5px;
+        }
+
+        .door-r::before {
+            left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="door-l"></div>
+        <div class="door-r"></div>
+    </section>
+</body>
+
+</html>

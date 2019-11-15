@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 1.String.fromCodePoint() 返回对应码点的字符，多个参数会返回一个字符串
+    //可以识别大于 0*FFFF的字符
+
+    // 2.String.raw()   转移斜杠
+
+    // 3.codePoint() 会正确返回32位的UTF-16字符的十进制码值，想转换成16进制 toString(16)
+
+    // 4.normalize() 将字符串的不同表示方法统一为同样的方式
+    //，比如O（\u004F）和ˇ（\u030C）合成Ǒ（\u004F\u030C）。
+    // '\u01D1'.normalize() === '\u004F\u030C'.normalize()
+    // true
+
+    // includes(), startsWith(), endsWith()
+
+    // repeat(n)  //将字符串 重复 n次
+
+    // padStart(), padEnd() //向前填充 向后填充
+
+    // trimStart(), trimEnd()
+
+    // matchAll() 返回一个正则表达式在当前字符串的所有匹配
+</script>
+
+</html>

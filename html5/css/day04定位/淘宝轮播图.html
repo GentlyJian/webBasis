@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    ul {
+        list-style: none;
+    }
+    .sliderbar {
+        width: 520px;
+        height: 280px;
+        margin: 50px auto;
+        background-color: pink;
+        position: relative;
+    }
+    .right,.left  {
+        height: 36px;
+        width: 24px;
+        position: absolute;
+        top: 50%;
+        margin-top: -18px;
+    }
+    .right {
+        right: 0px;
+    }
+    .left {
+        left: 0px;
+    }
+    .circle {
+        width: 65px;
+        height: 13px;
+        background: rgba(255, 255, 255, .2);
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        margin-left: -32px;
+        border-radius: 6px;
+    }
+    .circle li {
+        height: 9px;
+        width: 9px;
+        background-color: #ccc;
+        border-radius: 50%;
+        margin: 2px;
+        float: left;
+        color: purple;
+    }
+    .circle li:first-child{
+        background-color: #f40;
+    }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="sliderbar">
+        <img src="images/taobao.jpg" alt="" class="adv">
+        <img src="images/left.png" alt="" class="left">
+        <img src="images/right.png" alt="" class="right">
+        <ul class="circle">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>

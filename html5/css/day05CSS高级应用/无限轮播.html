@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            height: 86px;
+            width: 882px;
+            margin: 100px auto;
+            overflow: hidden;
+            border: 1px solid #faf;
+
+        }
+        ul {
+            list-style: none;
+            width: 200%;
+          
+        }
+        ul li {
+            float:left;
+            animation: slid 5s linear infinite;
+        }
+        @keyframes slid {
+            from {
+                transform: translateX(0px);
+            }
+            to {
+                transform: translate(-882px)
+            }
+        }
+        ul:hover li {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <!-- 弄两组li就能实现无缝滚动 -->
+        <ul>
+            <li><img src="images/nav1.jpg" alt=""></li>
+            <li><img src="images/nav2.jpg" alt=""></li>
+            <li><img src="images/nav3.jpg" alt=""></li>
+            <li><img src="images/nav4.jpg" alt=""></li>
+            <li><img src="images/nav5.jpg" alt=""></li>
+            <li><img src="images/nav6.jpg" alt=""></li>
+            <li><img src="images/nav7.jpg" alt=""></li>
+            <li><img src="images/nav1.jpg" alt=""></li>
+            <li><img src="images/nav2.jpg" alt=""></li>
+            <li><img src="images/nav3.jpg" alt=""></li>
+            <li><img src="images/nav4.jpg" alt=""></li>
+            <li><img src="images/nav5.jpg" alt=""></li>
+            <li><img src="images/nav6.jpg" alt=""></li>
+            <li><img src="images/nav7.jpg" alt=""></li>
+        </ul>
+    </nav>
+</body>
+</html>

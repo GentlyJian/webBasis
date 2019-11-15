@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //对象不像数组是有序的，需要指明属性值才能准确赋值
+    // let { foo, bar } = { foo: "aaa", bar: "bbb" };
+    // foo;
+    // bar;
+
+    //没找到对应属性的值 和 解构失败 默认值是 undefined
+    // let { baz } = { foo: 'aaa', bar: 'bbb' };
+
+    //依据对象解构赋值的特性，可以将现有对象的方法 解构赋值的到 自定义对象,
+    // 不过要求对象值的名称能在现有对象找到
+    // 例一
+    // let { log, sin, cos } = Math; //将Math的log(),sini(),cos()方法赋值给log,sin,cos对象
+    // 例二
+    // const { log } = console; //将console对象的log（）方法赋值给log对象
+    // log('hello') // hello
+
+    // 当对象名和赋值的属性名不一致时
+    // let { foo: baz } = { foo: 'aaa', bar: 'bbb' };
+    // baz // "aaa"
+
+    // let obj = { first: 'hello', last: 'world' };
+    // let { first: f, last: l } = obj;
+    // f // 'hello'
+    // l // 'world'
+
+    //嵌套解构对象
+    // let obj = {
+    //     p: [
+    //         "hello",
+    //         { y: "world" }
+    //     ]
+    // }
+    // let {p:[x,{y}]} = obj;
+    // console.log(x);
+    // console.log(y);
+
+    //可以给y取一个别名
+    // let {p: [x, {y:wd}]} = obj;
+    // console.log(x);
+    // // console.log(y); //ReferenceError : y is not defined
+    // console.log(wd);
+
+    // //如果想获取p里的值
+    // console.log(p); // ReferenceError : p is not defined
+    // let {p: p,p: [x, {y}]} = obj;
+    // console.log(x);
+    // console.log(y);
+    // console.log(p);
+
+    //分清模式 与 变量
+    // const node = {
+    //     loc: {
+    //         start: {
+    //             line: 1,
+    //             column: 5
+    //         }
+    //     }
+    // };
+    //要求获取 node 里的 loc start line
+    // let {loc, loc:{start}, loc:{start:{line}}} = node;
+    // console.log(loc);
+    // console.log(start);
+    // console.log(line);
+
+    //嵌套赋值 
+    // let obj = {};
+    // let arr = [];
+    //没有使用let,使用let报错， 而使用了()
+    // ({foo: obj.prop, bar: arr[0]} = {foo: 123, bar: true})
+    // obj;
+    // arr;
+    // 如果解构对象是嵌套对象，子对象的父属性没有赋值不存在，则会报错
+    // let {foo: {baz}} = {fo:{baz: 123}} // foo是undifined 报错：Cannot destructure property `baz` of 'undefined' or 'null'
+    // let {foo: {baz}} = {foo: 123}  //undefined
+    // let {foo: {baz}} = {foo: {baz:123}};
+    // console.log(baz);
+
+    //解构赋值可以取到继承的属性
+    // const obj1 = {};
+    // const obj2 = {foo: 123};
+    // Object.setPrototypeOf(obj1, obj2); //将obj的prototype设置为 obj2;
+    // const {foo} = obj1; //obj.__proto__.foo
+    // console.log(obj1);
+    // console.log(foo);
+
+    // 圆括号的使用
+    //声明不能使用
+    //赋值的模式不能被包含在内
+    let b;
+    [(b)] = [3];
+    console.log(b);
+
+</script>
+
+</html>

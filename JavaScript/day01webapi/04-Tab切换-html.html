@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {margin:0; padding: 0;}
+        ul {
+            list-style-type: none;
+        }
+        .box {
+            width: 400px;
+            height: 300px;
+            border: 1px solid #ccc;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        .hd {
+            height: 45px;
+        }
+        .hd span {
+            display:inline-block;
+            width: 90px;
+            background-color: pink;
+            line-height: 45px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .hd span.current {
+            background-color: purple;
+        }
+        .bd div {
+            height: 255px;
+            background-color: purple;
+            display: none;
+        }
+        .bd div.current {
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+<div class="box" id="box">
+    <div class="hd">
+        <span class="current">体育</span>
+        <span>娱乐</span>
+        <span>新闻</span>
+        <span>综合</span>
+    </div>
+    <div class="bd">
+        <div class="current">我是体育模块</div>
+        <div>我是娱乐模块</div>
+        <div>我是新闻模块</div>
+        <div>我是综合模块</div>
+    </div>
+</div>
+   <script>
+       var box = document.getElementById('box');
+       var hd = box.getElementsByClassName('hd');
+       var spans = hd[0].children;
+    //children 和 getElementsBytagName效果一样
+    //    console.log(hd[0].children);
+    //    console.log(hd[0].getElementsByTagName('span'));
+       for(var i =0; i < spans.length; i++){
+            var span = spans[i];
+            span.onmouseover = fn;
+       }
+       //给 span注册事件
+       function fn() {
+           //清除每一个span的样式 并为每一个span添加一个index属性
+           for(var i = 0; i < spans.length; i++) {
+               var span = spans[i];
+               span.setAttribute("index",i);
+               span.removeAttribute("class");
+           }
+           //移除完后 为当前span添加current样式
+           this.setAttribute("class","current");
+
+           //清除bd中的每一个div
+           var bd = box.getElementsByClassName("bd")[0];
+           var bdivs = bd.children;
+           for(var j = 0; j < bdivs.length; j++){
+                var bdiv = bdivs[j];
+                bdiv.removeAttribute("class");
+           }
+           var index = parseInt(this.getAttribute("index"));
+           bdivs[index].setAttribute("class","current");
+           
+       }
+   </script>
+</body>
+</html>

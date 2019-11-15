@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>HTML5新增表单元素</legend>
+        <form action="">
+            <label for="userName">姓名</label>
+            <input type="text" name="userName" id="userName" placeholder="请输入用户名" autocomplete="on"
+                autofocus><br /><br />
+            <label for="userPhone">手机号</label>
+            <input type="tel" name="userPhone" id="userPhone" placeholder="手机号码" autocomplete="on"
+                pattern="^1\d{10}$"><br /><br />
+            <label for="email">邮箱地址</label>
+            <input type="email" required name="email" id="email"><br /><br />
+            <label for="college">所属学院</label>
+            <input type="text" name="college" id="college" list="cList" placeholder="请选择"><br /><br />
+            <datalist id="cList">
+                <option value="前端移动开发"></option>
+                <option value="java学院"></option>
+                <option value="c++学院"></option>
+            </datalist>
+            <label for="score">入学成绩</label>
+            <input type="number" max="100" min="0" value="0" id="score"><br /><br />
+            <label for="inTime">入学日期</label>
+            <input type="date" id="inTime" name="inTime"><br /><br />
+            <label for="leaveTime">毕业日期</label>
+            <input type="date" id="leaveTime"><br /><br />
+            <input type="submit"> <input type="reset">
+        </form>
+    </fieldset>
+</body>
+
+</html>

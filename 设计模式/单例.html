@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // var getSingle = function(fn) {
+    //     let result;
+    //     return function(){
+    //         return result || (result = fn.apply(this, arguments));
+    //     }
+    // }
+
+    // var createInstance = getSingle(function(name) {
+    //     return {name: name}
+    // });
+
+    // var person1 = createInstance('zzj');
+    // var person2 = createInstance('sjj')
+    // console.log(person1, person2);
+
+    // ------------------------
+
+    class SingleDesign {
+        constructor(data) {
+            if(SingleDesign.prototype.Instance === undefined) {
+                this.data = data;
+                SingleDesign.prototype.Instance = this;
+            }
+            return SingleDesign.prototype.Instance;
+        }
+    }
+
+    var person1 = new SingleDesign({name: 'zzz', age: '22'});
+    var person2 = new SingleDesign({name: 'sjj', age: '23'});
+    console.log(person1, person2);
+</script>
+</html>

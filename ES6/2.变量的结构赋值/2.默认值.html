@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //解构赋值允许指定默认值。一个数组成员严格等于undefined，默认值才会生效。
+    // let [x = 'a', y = 'b'] = [, undefined]; // x='a', y='b'
+    // console.log(x);
+    // console.log(y);
+    //null 不严格等于 undefined 
+    // let [x = 'a', y = 'b'] = [null, undefined]; // x=null, y='b'
+    // console.log(x);
+    // console.log(y);
+
+    //惰性求值
+    let x;
+    // if ([1][0] === undefined) { //[1][0] 值为1的这个数组的第一个值
+        if ([1][1] === undefined) { 
+        x = function (){
+            console.log("aaa");
+        }
+    } else {
+        x = [1][0];
+    }
+    // console.log(x);
+    x();
+
+    //默认值可以应用解构赋值的其他变量，但改变量必须已经声明
+</script>
+
+</html>

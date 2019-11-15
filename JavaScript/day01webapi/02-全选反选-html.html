@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap {
+            width: 300px;
+            margin: 100px auto 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #c0c0c0;
+            width: 300px;
+        }
+
+        th,
+        td {
+            border: 1px solid #d0d0d0;
+            color: #404060;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #09c;
+            font: bold 16px "微软雅黑";
+            color: #fff;
+        }
+
+        td {
+            font: 14px "微软雅黑";
+        }
+
+        tbody tr {
+            background-color: #f0f0f0;
+        }
+
+        tbody tr:hover {
+            cursor: pointer;
+            background-color: #fafafa;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" id="j_cbAll" />
+                    </th>
+                    <th>商品</th>
+                    <th>价钱</th>
+                </tr>
+            </thead>
+            <tbody id="j_tb">
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>iPhone8</td>
+                    <td>8000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>iPad Pro</td>
+                    <td>5000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>iPad Air</td>
+                    <td>2000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>Apple Watch</td>
+                    <td>2000</td>
+                </tr>
+
+            </tbody>
+        </table>
+        <input type="button" value="  反 选  " id="btn">
+    </div>
+    <script>
+        //全选功能
+        var all = document.getElementById("j_cbAll");
+        var tbody = document.getElementById("j_tb");
+        var inputs = tbody.getElementsByTagName("input");
+        all.onclick = function () {
+            for (var i = 0; i < inputs.length; i++) {
+                var input = inputs[i];
+                if (input.type != 'checkbox') continue;
+                input.checked = all.checked;
+            }
+        }
+        //如果子checked没有全部被选中 父就不会选中，否则相反
+        for (var i = 0; i < inputs.length; i++) {
+            var input = inputs[i];
+            if (input.type != 'checkbox') continue;
+            input.onclick = function () {
+                var isall = true;
+                //每次点击都遍历 查询是否都选中
+                for (var j = 0; j < inputs.length; j++) {
+                    if (inputs[j].type != 'checkbox') continue;
+                    if (!inputs[j].checked) {
+                        isall = false;
+                    }
+                }
+                all.checked = isall;
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
